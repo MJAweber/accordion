@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVIGATION1</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        *{box-sizing: border-box;}
+.nav_section {
+            height: 200px;
+            width: 100%;
+            /* background-color: aqua; */
+            position: relative;
+        }
+
+        .help {
+            position: absolute;
+            height: 100px;
+            width: 15%;
+            /* background-color: teal; */
+            left: 2%;
+            top: 7vh;
+        }
+
+        .help p {
+            font-size: 20px;
+            padding: 4%;
+        }
+
+        .help i {
+            color: orange;
+            margin-left: 1%;
+        }
+
+        .googles {
+            position: absolute;
+            width: 49%;
+            height: 150px;
+            left: 25%;
+            top: 5vh;
+            /* background-color: violet; */
+            text-align: center;
+        }
+
+        .googles ul li {
+            display: inline;
+            list-style: none;
+            font-size: 16px;
+            margin: 5%;
+        }
+
+        .googles p {
+            font-size: 60px;
+            text-shadow: 2px 2px 3px rgb(0 0 0 / 26%);
+            color: #454546;
+            margin: 0;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 2%;
+
+        }
+
+        hr {
+            border: 1px solid green;
+            border-radius: 5px;
+            /* margin-bottom: 4%; */
+        }
+
+        .mycart {
+            width: 20%;
+            position: absolute;
+            right: 0.2%;
+            top: 9vh
+        }
+
+        .mycart input {
+            background-color: white;
+            font-size: 15px;
+            width: 160px;
+            height: 50px;
+            font-family: inherit;
+            margin-left: 5%;
+           
+        }
+        .con1{
+            width:70%;
+            background-color: whitesmoke;
+            margin-top: 1%;
+            position: absolute;
+            left:15%;
+            display: none;
+        }
+        .con2{
+            width:70%;
+            background-color: whitesmoke;
+            margin-top: 1%;
+            position: absolute;
+            left:15%;
+            display: none;
+        }
+            
+
+    
+        .col{
+            width:32%;
+            margin:.5%;
+            height: 400px;
+            background-color: whitesmoke;
+            float: left;
+        }
+        .Features{
+            position: relative;
+        }
+        ul li{
+            list-style: none;
+        }
+       .col p{
+           font-size: 30px;
+           padding-left: 13%;
+       }
+       .col li{
+           font-size: 20px;
+           margin-left: 4%;
+           
+       }
+       .col img{
+        width:100%;
+       }
+    </style>
+</head>
+<body>
+    <div class="nav_section">
+        <div class="help">
+            <p>Need Help</p>
+            <p><i class="fas fa-phone"></i>&nbsp; &nbsp;12345678009</p>
+        </div>
+        <div class="googles">
+            <p>GOOGLES</p>
+            <hr>
+            <ul class="Features">
+                <li style="color: orange;">Home</li>
+                <li>About</li>
+                <li id="fea1">Features <i class="fas fa-caret-down"></i></li>                  
+                <li id="shop">Shop<i class="fas fa-caret-down"></i></li>
+                <li>Contact</li>
+                <li><i class="fas fa-search"></i></li>
+            </ul>
+        </div>
+        <div class="mycart">
+            <i class="fas fa-user"></i>
+            <input type="button" value="My Cart">
+        </div>
+    </div>
+    <hr>
+    <div class="con2" id="con2">
+        <div class="col">
+            <p>Premius Glasses</p>
+            <ul>
+                <li>Designer glases</li>
+                <li>Ray Ban Glasses</li>
+                <li>prescirption glasses</li>
+                <li>Designer glases</li>
+                <li>Ray Ban Glasses</li>
+                <li>prescirption glasses</li>
+                <li>Designer glases</li>
+                <li>Ray Ban Glasses</li>
+                <li>prescirption glasses</li>
+            </ul>
+           
+        </div>
+        <div class="col">
+            <p>Premium glasses</p>
+            <ul>
+                <li>Designer glases</li>
+                <li>Ray Ban Glasses</li>
+                <li>prescirption glasses</li>
+                <li>Designer glases</li>
+                <li>Ray Ban Glasses</li>
+                <li>prescirption glasses</li>
+                <li>Designer glases</li>
+                <li>Ray Ban Glasses</li>
+                <li>prescirption glasses</li>
+            </ul>
+        </div>
+        <div class="col">
+            <p>Premius Glasses</p>
+            <img src="image/g1.jpg" alt="">
+        </div>
+    </div>
+    <!-- con2 -->
+    <div class="con1" id="con1">
+        <div class="col">
+            <p>Premius Glasses</p>
+            <ul>
+                <li>Designer glases</li>
+                <li>Ray Ban Glasses</li>
+                <li>prescirption glasses</li>
+            </ul>
+            <p>View More Pages</p>
+            <ul>
+                <li>About us</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="col">
+            <p>Premius Glasses</p>
+            <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="col">
+            <p>Premius Glasses</p>
+            <img src="image/g3.jpg" alt="">
+        </div>
+    </div>
+    
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        // if(document.getElementById('con1').style.display=='block')
+        // document.getElementById('con2').style.display=='none'
+        // if(document.getElementById('con2').style.display=='block')
+        // document.getElementById('con1').style.display=='none'
+       
+        $(document).ready(function(){
+            $("#fea1").click(function(){
+                $("#con1").slideToggle();
+                $("#con2").hide();
+            })
+            $("#shop").click(function(){
+                $("#con2").slideToggle();
+                $("#con1").hide();
+            })
+            $("#fea1").hover(function(){
+                $("#con1").slideToggle();
+                $("#con2").hide();
+            })
+            $("#shop").hover(function(){
+                $("#con2").slideToggle();
+                $("#con1").hide();
+            })
+        })
+    </script>
+</body>
+</html>

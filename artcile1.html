@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article1</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .clr{clear: both;}
+        .tab{
+            height:70px;
+            width:90%;
+            margin: auto;
+            background-color: teal;
+            margin-bottom: .5%;
+        }
+        .tab_data
+        {
+            height:370px;
+            width:90%;
+            margin: auto;
+            background-color: blue;
+            margin-bottom: .5%;
+            display: none;
+        }
+        .write_section{
+            height:370px;
+            width:49.5%;
+          float: left;
+            background-color: rgb(51, 218, 18);
+        }
+        .display_section{
+            height:370px;
+            width:49.5%;
+          float: right;
+            background-color: rgb(224, 221, 10);
+        }
+        .tab_title{
+            width: 97%;
+            height: 80px;
+            background-color: whitesmoke;
+            margin-left: 1%;
+        }
+        .tab_text{
+            width: 97%;
+            height:180px;
+            background-color:whitesmoke;
+            margin-left: 1%;
+            margin-top: .5%;
+        }
+        label{
+            margin-left: 1%;
+            font-size: 25px;
+        }
+        button{float: left;
+        background-color: black;
+    color: white;
+margin-left: 45%;
+height:40px;
+width:90px;
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="tab" id="tab1">
+       
+    </div>
+    <div class="tab_data"id="td1">
+        <div class="write_section">
+            
+            
+            <label for="tab1_ti">Add Title</label>
+            <input type="text" placeholder="Write your title here" class="tab_title" id="w_title">
+            <br>
+            <label for="tab1_te">Add Text</label>
+            <input type="text" placeholder="Write your Text here"  class="tab_text" id="w_text">
+            <button  type="button" onclick="display()">Display</button>
+        </div>
+        <div class="display_section">
+            <label for="tab1_ti">Your Title</label>
+            <input type="text"   class="tab_title" id="d_title">
+            <br>
+            <label for="tab1_te">Your Text</label>
+            <input type="text"   class="tab_text" id="d_text">
+            <button  type="button"onclick="clear()">Clear</button>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <div class="tab"id="tab2"></div>
+    <div class="tab_data"id="td2">
+        <div class="write_section"></div>
+        <div class="display_section"></div>
+    </div>
+    <div class="clr"></div>
+    <div class="tab"id="tab3"></div>
+    <div class="tab_data"id="td3">
+        <div class="write_section"></div>
+        <div class="display_section"></div>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#tab1").click(function(){
+                $("#td1").slideToggle();
+                $("#td2").slideUp();
+                $("#td3").slideUp();
+            })
+            $("#tab2").click(function(){
+                $("#td2").slideToggle();
+                $("#td1").slideUp();
+                $("#td3").slideUp();
+            })
+            $("#tab3").click(function(){
+                $("#td3").slideToggle();
+                $("#td1").slideUp();
+                $("#td2").slideUp();
+
+            })
+        })
+        function display(){           
+            document.getElementById('d_title').value=document.getElementById('w_title').value;
+            document.getElementById('d_text').value=document.getElementById('w_text').value;
+        }
+        function clear1(){           
+            document.getElementById('d_title').value="hlo ";
+            document.getElementById('d_text').value=" ";
+        }
+    </script>
+</body>
+</html>
